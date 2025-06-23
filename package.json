@@ -1,0 +1,88 @@
+{
+  "name": "super-ng",
+  "version": "0.0.0",
+  "scripts": {
+    "lint": "eslint . --ext .ts,.js && stylelint '**/*.scss'",
+    "format": "prettier --write .",
+    "pre-commit": "pretty-quick --staged",
+    "i18n:extract": "ngx-translate-extract --input ./src --output ./src/assets/i18n/en.json",
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^19.1.0",
+    "@angular/common": "^19.1.0",
+    "@angular/compiler": "^19.1.0",
+    "@angular/core": "^19.1.0",
+    "@angular/forms": "^19.1.0",
+    "@angular/platform-browser": "^19.1.0",
+    "@angular/platform-browser-dynamic": "^19.1.0",
+    "@angular/pwa": "^19.2.15",
+    "@angular/router": "^19.1.0",
+    "@angular/service-worker": "^19.2.14",
+    "@ngneat/hot-toast": "^6.1.0",
+    "@ngneat/overview": "^5.1.1",
+    "@ngneat/until-destroy": "^10.0.0",
+    "@ngx-translate/core": "^16.0.4",
+    "@ngx-translate/http-loader": "^16.0.1",
+    "bootstrap": "^5.3.7",
+    "rxjs": "~7.8.0",
+    "sanitize.css": "^13.0.0",
+    "socket.io-client": "^4.8.1",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.15.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^19.1.7",
+    "@angular/cli": "^19.1.7",
+    "@angular/compiler-cli": "^19.1.0",
+    "@angular/language-service": "^19.2.14",
+    "@angular/localize": "^19.2.14",
+    "@biesbjerg/ngx-translate-extract": "^7.0.4",
+    "@biesbjerg/ngx-translate-extract-marker": "^1.0.0",
+    "@eslint/js": "^9.29.0",
+    "@ngx-rocket/scripts": "^5.2.3",
+    "@types/jasmine": "~5.1.0",
+    "@types/node": "^24.0.3",
+    "angular-eslint": "^20.1.0",
+    "eslint": "^9.29.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsdoc": "^51.0.3",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "eslint-plugin-prettier": "^5.5.0",
+    "globals": "^16.2.0",
+    "husky": "^9.1.7",
+    "jasmine-core": "~5.5.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "postcss": "^8.5.6",
+    "prettier": "^3.5.3",
+    "pretty-quick": "^4.2.2",
+    "reflect-metadata": "^0.2.2",
+    "stylelint": "^16.20.0",
+    "stylelint-config-recommended-scss": "^15.0.1",
+    "stylelint-config-standard": "^38.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.34.1"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "overrides": [
+      {
+        "files": "*.scss",
+        "options": {
+          "singleQuote": false
+        }
+      }
+    ]
+  }
+}
