@@ -40,3 +40,27 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+##################################################
+
+# Python bytecode and cache
+*.pyc
+**/__pycache__/**
+
+# Virtual environment
+/backend/env_superng
+
+# Django migrations (optional, if you don't want to track them)
+/backend/**/migrations/*.pyc
+/backend/**/migrations/__pycache__/
+/backend/**/migrations/*.py
+
+# SQLite database (if used)
+/backend/db.sqlite3
+
+# Media/uploads (if not needed in repo)
+/backend/media/
+/backend/staticfiles/
+
+# Logs
+/backend/*.log
