@@ -1,0 +1,15 @@
+docker build -t superng-frontend .
+docker run -p 4200:80 superng-frontend
+docker run -d -p 4200:80 superng-frontend
+docker run -it --rm superng-frontend sh
+ls /app/superng/index.html
+
+
+Use docker image prune -f for dangling images.
+Use docker rmi <image_name> for named images.
+Use docker rmi $(docker images -q) --force to remove all images.
+
+
+cd backend
+docker build -t superng-backend .
+docker run -d -p 8000:8000 superng-backend

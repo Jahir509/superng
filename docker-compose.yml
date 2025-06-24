@@ -1,0 +1,26 @@
+# version
+version: '3.9'
+
+# services
+services:
+  # web service
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: superng-frontend
+    ports:
+      - "4200:80"
+    restart: unless-stopped
+
+  # backend service
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: superng-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/db.sqlite3:/app/superng/db.sqlite3
+    restart: unless-stopped
